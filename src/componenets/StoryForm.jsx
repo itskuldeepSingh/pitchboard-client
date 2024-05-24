@@ -4,7 +4,7 @@ import { icons } from './Icons';
 import { v4 as uuidv4 } from 'uuid';
 
 // import io from 'socket.io-client';
-// const socket = io.connect("http://localhost:3001");
+// const socket = io.connect("https://pitchboard-server.onrender.com/");
 
 
 function StoryForm() {
@@ -31,7 +31,7 @@ function StoryForm() {
         };
 
         try {
-            const response = await fetch("http://localhost:3001/api/users/storypitched", {
+            const response = await fetch("https://pitchboard-server.onrender.com/api/users/storypitched", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -4,7 +4,8 @@ import { login as userLogin, updateOnlineUsers } from '../store/authSlice'; // I
 import { useDispatch } from 'react-redux';
 import io from 'socket.io-client';
 import { setStories } from '../store/pitchboardSlice';
-const socket = io.connect("http://localhost:3001"); // backend end point
+const socket = io.connect("https://pitchboard-server.onrender.com/"); // backend end point
+
 
 
 
@@ -28,7 +29,7 @@ function Login() {
 
     const fetchStories = async () => {
         try {
-            const response = await fetch("http://localhost:3001/api/users/getallstory");
+            const response = await fetch("https://pitchboard-server.onrender.com/api/users/getallstory");
             if (response.ok) {
                 const stories = await response.json();
                 console.log(stories);
@@ -43,7 +44,7 @@ function Login() {
 
     const handleLogin = () => {
         try {
-            fetch("http://localhost:3001/api/users/login", {
+            fetch("http://https://pitchboard-server.onrender.com/api/users/login", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

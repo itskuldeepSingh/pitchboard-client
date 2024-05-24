@@ -7,7 +7,7 @@ import AllStories from './AllStories';
 
 
 import io from 'socket.io-client';
-const socket = io.connect("http://localhost:3001") // backend end point
+const socket = io.connect("https://pitchboard-server.onrender.com/") // backend end point
 
 
 const Dashboard = () => {
