@@ -44,7 +44,7 @@ function Login() {
 
     const handleLogin = () => {
         try {
-            fetch("http://https://pitchboard-server.onrender.com/api/users/login", {
+            fetch("https://https://pitchboard-server.onrender.com/api/users/login", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
